@@ -67,10 +67,11 @@
   main section article {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 250px;
     align-items: center;
     height: 250px;
     font-size: 250px;
+    opacity: 0.8;
   }
   main section:nth-child(even) article:nth-child(1) {
     background-color: #e3d47f;
@@ -89,6 +90,21 @@
   }
   main section:nth-child(odd) article:nth-child(3) {
     background-color: #b1b1b1;
+  }
+  .global {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  body > .global:first-child,
+  body > .global:last-child {
+    background-color: green;
+  }
+  main > .global:nth-child(even) {
+    background-color: lime;
+  }
+  main > .global:nth-child(odd) {
+    background-color: teal;
   }
   footer {
     height: 70px;

@@ -106,11 +106,12 @@ main{
       article{
         display:flex;
         justify-content:center;
-        width:100%;
+        width: @largeur_article;
         align-items: center;
         height : @largeur_article;
        // border: 1px solid #aaa;
         font-size: @largeur_article;
+        opacity: 0.8;
       }
 
       &:nth-child(even) {
@@ -124,6 +125,27 @@ main{
           article:nth-child(3) {background-color: @couleur-10;}
       }
     }
+}
+
+.global
+{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+}
+body >.global:first-child,body >.global:last-child
+{
+  background-color: green;
+}
+
+main >.global:nth-child(even)
+{
+  background-color: lime;
+}
+
+main >.global:nth-child(odd)
+{
+  background-color: teal;
 }
 
 footer{
@@ -145,4 +167,8 @@ footer div i{
 footer div i:hover{
    color : @couleur-complementaire;
 }
+
+
+
+
 
